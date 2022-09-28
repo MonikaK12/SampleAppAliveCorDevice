@@ -48,55 +48,5 @@ object AppConstants {
         const val EXTRA_HCP_ID = "${PACKAGE_NAME}.HCP_ID"
     }
 
-    val MONTH_FULL_NAME_MAP = hashMapOf(
-        "jan" to R.string.text_full_month_jan,
-        "feb" to R.string.text_full_month_feb,
-        "mar" to R.string.text_full_month_mar,
-        "apr" to R.string.text_full_month_apr,
-        "may" to R.string.text_full_month_may,
-        "jun" to R.string.text_full_month_jun,
-        "jul" to R.string.text_full_month_jul,
-        "aug" to R.string.text_full_month_aug,
-        "sep" to R.string.text_full_month_sep,
-        "oct" to R.string.text_full_month_oct,
-        "nov" to R.string.text_full_month_nov,
-        "dec" to R.string.text_full_month_dec
-    )
-
-    val MONTH_SHORT_NAME_MAP = hashMapOf(
-        "jan" to R.string.text_short_month_jan,
-        "feb" to R.string.text_short_month_feb,
-        "mar" to R.string.text_short_month_mar,
-        "apr" to R.string.text_short_month_apr,
-        "may" to R.string.text_short_month_may,
-        "jun" to R.string.text_short_month_jun,
-        "jul" to R.string.text_short_month_jul,
-        "aug" to R.string.text_short_month_aug,
-        "sep" to R.string.text_short_month_sep,
-        "oct" to R.string.text_short_month_oct,
-        "nov" to R.string.text_short_month_nov,
-        "dec" to R.string.text_short_month_dec
-    )
-
-    val DAY_FULL_NAME_MAP = hashMapOf(
-        "mon" to R.string.text_full_day_mon,
-        "tue" to R.string.text_full_day_tue,
-        "wed" to R.string.text_full_day_wed,
-        "thu" to R.string.text_full_day_thu,
-        "fri" to R.string.text_full_day_fri,
-        "sat" to R.string.text_full_day_sat,
-        "sun" to R.string.text_full_day_sun
-    )
-
-    val DAY_SHORT_NAME_MAP = hashMapOf(
-        "mon" to R.string.text_short_day_mon,
-        "tue" to R.string.text_short_day_tue,
-        "wed" to R.string.text_short_day_wed,
-        "thu" to R.string.text_short_day_thu,
-        "fri" to R.string.text_short_day_fri,
-        "sat" to R.string.text_short_day_sat,
-        "sun" to R.string.text_short_day_sun
-    )
-
 
 }

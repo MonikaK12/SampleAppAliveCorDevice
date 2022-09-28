@@ -1,8 +1,6 @@
 package com.example.sampleappalivecordevice.utils
 
 import com.example.sampleappalivecordevice.R
-import com.example.sampleappalivecordevice.utils.constants.AppConstants.DAY_FULL_NAME_MAP
-import com.example.sampleappalivecordevice.utils.constants.AppConstants.MONTH_FULL_NAME_MAP
 import com.example.sampleappalivecordevice.utils.omron_2.AppPreffs
 import org.threeten.bp.Instant
 import org.threeten.bp.ZoneId

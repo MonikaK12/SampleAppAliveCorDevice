@@ -1,8 +1,5 @@
 package com.example.sampleappalivecordevice.utils.omron_2.model.entity;
 
-
-import com.example.sampleappalivecordevice.omron.model.entity.DeviceInfo;
-
 import androidx.annotation.NonNull;
 
 import java.math.BigDecimal;
