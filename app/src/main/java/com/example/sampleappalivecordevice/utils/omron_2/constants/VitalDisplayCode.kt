@@ -1,0 +1,28 @@
+package com.example.sampleappalivecordevice.utils.constants
+
+enum class VitalDisplayCode {
+    hr,
+    hr_bp,
+    steps,
+    bpw,
+    hrv,
+    rr,
+    o_temp,
+    b_temp,
+    t_temp,
+    core_temp,
+    bp,
+    weight,
+    bi,
+    spo2,
+    hrEpisodic,
+    si,
+    hr_quality,
+    rr_quality,
+    hrv_quality,
+    blood_perf,
+    blood_glucose,
+    act,
+    spo2_quality,
+    sps,
+}

@@ -1,0 +1,7 @@
+package com.example.sampleappalivecordevice.devicecommunication.interfaces
+
+import com.example.sampleappalivecordevice.devicecommunication.BleDeviceStateChanged
+
+interface BioBleDeviceConnectionListener {
+  fun onBleDeviceConnectionStateChanged(bleDeviceStateChanged: BleDeviceStateChanged)
+}

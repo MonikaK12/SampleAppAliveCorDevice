@@ -1,0 +1,21 @@
+package com.biofourmis.careathomerpm.devicecommunication
+
+enum class BleDeviceType(var label: String) {
+    BLE_DEVICE_EVERION("Everion 1"),
+    BLE_DEVICE_OMRON_BP("Omron BP"),
+    BLE_DEVICE_OMRON_WEIGHT("Omron Weight Scale"),
+    BLE_DEVICE_OMRON_BCM("Omron BCM"),
+    BLE_DEVICE_MEGARING("Megaring"),
+    BLE_DEVICE_ITHERMONITER("iThermoniter"),
+    BLE_DEVICE_IHEALTH_PO3M("iHealth PO3M"),
+    BLE_DEVICE_IHEALTH_BP5("iHealth BP5"),
+    BLE_DEVICE_WELCHALLYN_WEIGHT("WelchAllyn Weight Scale"),
+    BLE_DEVICE_WELCHALLYN_BP1700("WelchAllyn BP1700"),
+    BLE_DEVICE_VITAL_PATCH("Vital Patch"),
+    BLE_DEVICE_NONIN_SPO2("Nonin SpO2"),
+    BLE_DEVICE_VALRT("VAlrt"),
+    BLE_DEVICE_FORACARE_IR20("FORA® IR20"),
+    BLE_DEVICE_FORACARE_TNG_WEIGHT_SCALE("FORA® TNG WEIGHT SCALE 550"),
+    BLE_DEVICE_FORACARE_WEIGHT_SCALE_W550("FORA® WEIGHT SCALE W550"),
+    BLE_DEVICE_FORACARE_TNG_BLOOD_GLUCOSE_METER("FORA® TNG Blood Glucose Monitor")
+}
