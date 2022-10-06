@@ -39,10 +39,6 @@
       </intent-filter>
     </activity>
 
-    <service
-      android:name="com.biofourmis.careathomerpm.devicecommunication.service.DeviceConnectionService"
-      android:foregroundServiceType="location|connectedDevice|dataSync" />
-
   </application>
 
 </manifest>
