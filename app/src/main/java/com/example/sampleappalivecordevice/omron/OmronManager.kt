@@ -2,6 +2,8 @@ package com.biofourmis.careathomerpm.omron
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
+import android.util.Log.d
 import com.biofourmis.careathomerpm.devicecommunication.BleDeviceState
 import com.biofourmis.careathomerpm.devicecommunication.BleDeviceType
 import com.biofourmis.careathomerpm.utils.Utils
@@ -16,6 +18,7 @@ import com.example.sampleappalivecordevice.omron.controller.BluetoothPowerContro
 import com.example.sampleappalivecordevice.omron.controller.ScanController
 import com.example.sampleappalivecordevice.omron.controller.SessionController
 import com.example.sampleappalivecordevice.omron.controller.util.AppLog
+import com.example.sampleappalivecordevice.omron.controller.util.AppLog.d
 import com.example.sampleappalivecordevice.omron.controller.util.Common
 import com.example.sampleappalivecordevice.omron.listeners.OmronDataSyncListener
 import com.example.sampleappalivecordevice.omron.model.entity.*
@@ -25,6 +28,7 @@ import com.example.sampleappalivecordevice.omron.model.enumerate.ResultType
 import com.example.sampleappalivecordevice.omron.model.system.AppConfig
 import com.example.sampleappalivecordevice.omron.model.system.LoggingManager
 import com.example.sampleappalivecordevice.utils.DateTimeUtils
+import com.example.sampleappalivecordevice.utils.Logger.d
 import com.example.sampleappalivecordevice.utils.omron_2.VitalMappingHelper
 import com.google.gson.Gson
 import io.realm.Realm
@@ -35,10 +39,13 @@ import jp.co.ohq.ble.OHQDeviceManager.DebugMonitor
 import jp.co.ohq.ble.enumerate.*
 import jp.co.ohq.utility.Handler
 import jp.co.ohq.utility.Types
+import jp.co.ohq.utility.log.UtilLog.d
 import okhttp3.internal.toImmutableList
 import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Logger
 import java.math.BigDecimal
 import java.util.*
+import kotlin.math.log
 
 
 class OmronManager :
@@ -267,7 +274,8 @@ class OmronManager :
     }
 
     override fun onPairingRequest() {
-
+       println("scanning")
+        Log.d("onScan", "scanning onPairingRequest")
     }
 
     override fun onAclConnectionStateChanged(aclConnectionState: AndroidPeripheral.AclConnectionState) {
@@ -276,12 +284,13 @@ class OmronManager :
 
     override fun onScanCompletion(reason: OHQCompletionReason) {
        // Logger.d("onScanCompletion1", " = " + reason.name)
+        Log.d("onScanCompletion1", " = " + reason.name)
     }
 
     override fun onScan(discoveredDevices: List<DiscoveredDevice>) {
         val deviceList: MutableList<DiscoveredDevice> = LinkedList()
 
-       // Logger.d("DATA_CHECK", "device list size" + discoveredDevices.size)
+        Log.d("DATA_CHECK", "device list size" + discoveredDevices.size)
         if (mIsOnlyPairingMode) {
             for (device in discoveredDevices) {
                 val eachUserData = device.eachUserData
@@ -342,7 +351,7 @@ class OmronManager :
         }
     }
 
-    fun init(context: Context, isRegistration: Boolean, listener: BioBleDeviceConnectionListener) {
+    fun init(isRegistration: Boolean, listener: BioBleDeviceConnectionListener) {
         isForRegistration = isRegistration
         if (mIsInitiated)
             return

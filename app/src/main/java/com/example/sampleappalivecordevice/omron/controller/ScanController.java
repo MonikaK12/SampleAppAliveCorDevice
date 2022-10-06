@@ -38,6 +38,7 @@ public class ScanController {
     private OHQDeviceCategory mFilteringDeviceCategory;
     private boolean mIsScanning;
     private boolean mIsRemoveHandlerCallbacks = false;
+
     @NonNull
     private final Runnable mBatchedScanRunnable = new Runnable() {
         @Override
