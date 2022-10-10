@@ -637,21 +637,15 @@ public class OHQDeviceManager {
                 for (UUID androidUUID : uuids.getUUIDs()) {
                     CBUUID uuid = new CBUUID(androidUUID);
                     OHQLog.d(uuid.toString());
-                    if (OHQUUIDDefines.Service.BodyComposition.uuid().equals(uuid)) {
-                        deviceCategory = OHQDeviceCategory.BodyCompositionMonitor;
-                    } else if (OHQUUIDDefines.Service.BloodPressure.uuid().equals(uuid)) {
+                    if (OHQUUIDDefines.Service.BloodPressure.uuid().equals(uuid)) {
                         deviceCategory = OHQDeviceCategory.BloodPressureMonitor;
-                    } else if (OHQUUIDDefines.Service.WeightScale.uuid().equals(uuid)) {
-                        deviceCategory = OHQDeviceCategory.WeightScale;
                     }
                 }
             } else if (structure instanceof EachUserData) {
                 hasEachUserData = true;
             }
         }
-        if (OHQDeviceCategory.WeightScale == deviceCategory && hasEachUserData) {
-            deviceCategory = OHQDeviceCategory.BodyCompositionMonitor;
-        }
+
         return deviceCategory;
     }
 

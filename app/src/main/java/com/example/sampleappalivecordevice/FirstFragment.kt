@@ -33,6 +33,7 @@ class FirstFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.buttonFirst.setOnClickListener {
+      //DeviceConnectionService.deviceCommunication?.unPairDevice(deviceToUnPair)
       findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
   }

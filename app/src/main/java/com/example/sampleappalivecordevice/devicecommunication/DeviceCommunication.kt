@@ -45,10 +45,7 @@ class DeviceCommunication @Inject constructor(
     }*/
 
     fun setUpOmronDataSyncListeners(omronDataSyncListener: OmronDataSyncListener) {
-        if (supportedDevices.contains(VitalDisplayType.omronBp.name) || supportedDevices.contains(
-                VitalDisplayType.omronBcm.name
-            )
-        ) {
+        if (supportedDevices.contains(VitalDisplayType.omronBp.name)) {
             OmronManager.getInstance()?.setOmronDataSyncListeners(omronDataSyncListener)
         }
     }
@@ -167,10 +164,7 @@ class DeviceCommunication @Inject constructor(
     }
 
     fun unPairAllDevices() {
-        if (supportedDevices.contains(VitalDisplayType.omronBp.name) || supportedDevices.contains(
-                VitalDisplayType.omronBcm.name
-            )
-        ) {
+        if (supportedDevices.contains(VitalDisplayType.omronBp.name)) {
             OmronManager.getInstance()?.clearDB()
         }
     }

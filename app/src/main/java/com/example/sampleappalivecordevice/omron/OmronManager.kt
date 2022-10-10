@@ -91,7 +91,7 @@ class OmronManager :
     private var mRealM: Realm? = null
     private var mIsInitiated = false
 
-    private val applicationContext: Context? = null
+    public var applicationContext: Context? = null
 
 
     companion object {
@@ -325,6 +325,7 @@ class OmronManager :
                             bioBleDeviceConnectionListener?.onBleDeviceConnectionStateChanged(
                                 BleDeviceStateChanged(bioBleDevice)
                             )
+                           // registerWithDevice(bioBleDevice)
                             //EventBus.getDefault().postSticky(BleDeviceStateChanged(bioBleDevice))
                         }
                         OHQDeviceCategory.WeightScale -> {
@@ -902,6 +903,7 @@ class OmronManager :
                         BleDeviceType.BLE_DEVICE_OMRON_BP
                     )
                 )
+                Log.d("DATA_RECIEVED", deviceBPDataList.get(0).diastolic.toString())
             }
             OHQDeviceCategory.WeightScale -> {
 
